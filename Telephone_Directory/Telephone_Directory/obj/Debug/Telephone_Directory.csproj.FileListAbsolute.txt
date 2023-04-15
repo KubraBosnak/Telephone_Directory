@@ -1,0 +1,10 @@
+C:\Users\Kübra\source\GitHub\Telephone_Directory\Telephone_Directory\Telephone_Directory\bin\Debug\Telephone_Directory.exe.config
+C:\Users\Kübra\source\GitHub\Telephone_Directory\Telephone_Directory\Telephone_Directory\bin\Debug\Telephone_Directory.exe
+C:\Users\Kübra\source\GitHub\Telephone_Directory\Telephone_Directory\Telephone_Directory\bin\Debug\Telephone_Directory.pdb
+C:\Users\Kübra\source\GitHub\Telephone_Directory\Telephone_Directory\Telephone_Directory\obj\Debug\Telephone_Directory.csproj.AssemblyReference.cache
+C:\Users\Kübra\source\GitHub\Telephone_Directory\Telephone_Directory\Telephone_Directory\obj\Debug\Telephone_Directory.Form1.resources
+C:\Users\Kübra\source\GitHub\Telephone_Directory\Telephone_Directory\Telephone_Directory\obj\Debug\Telephone_Directory.Properties.Resources.resources
+C:\Users\Kübra\source\GitHub\Telephone_Directory\Telephone_Directory\Telephone_Directory\obj\Debug\Telephone_Directory.csproj.GenerateResource.cache
+C:\Users\Kübra\source\GitHub\Telephone_Directory\Telephone_Directory\Telephone_Directory\obj\Debug\Telephone_Directory.csproj.CoreCompileInputs.cache
+C:\Users\Kübra\source\GitHub\Telephone_Directory\Telephone_Directory\Telephone_Directory\obj\Debug\Telephone_Directory.exe
+C:\Users\Kübra\source\GitHub\Telephone_Directory\Telephone_Directory\Telephone_Directory\obj\Debug\Telephone_Directory.pdb
