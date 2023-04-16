@@ -57,5 +57,53 @@ namespace Telephone_Directory
             Listele();
             Temizle();
         }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            
+            DialogResult secenek = MessageBox.Show("Silmek istediğinize emin misiniz?", "Dikkat", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+            if (secenek == DialogResult.Yes)
+            {
+                baglanti.Open();
+                SqlCommand komut = new SqlCommand("DELETE FROM TBLKISILER WHERE ID=" + txtId.Text, baglanti);
+                komut.ExecuteNonQuery();
+                baglanti.Close();
+                MessageBox.Show("Kişi Rehberden Silindi", "Bilgi",MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            Listele();
+            Temizle();
+            }  
+        }
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("UPDATE TBLKISILER SET AD=@P1, SOYAD=@P2, TELEFON=@P3, MAIL=@P4 WHERE ID= @P5", baglanti);
+            komut.Parameters.AddWithValue("@P1", txtAd.Text);
+            komut.Parameters.AddWithValue("@P2", txtSoyad.Text);
+            komut.Parameters.AddWithValue("@P3", mskdTxtTel.Text);
+            komut.Parameters.AddWithValue("@P4", txtMail.Text);
+            komut.Parameters.AddWithValue("@P5", txtId.Text);
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            MessageBox.Show("Kişi Bilgisi Güncellendi","Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            Listele();
+            Temizle();
+        }
+
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            Temizle();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int secilen = dataGridView1.SelectedCells[0].RowIndex;
+
+            txtId.Text = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
+            txtAd.Text = dataGridView1.Rows[secilen].Cells[1].Value.ToString();
+            txtSoyad.Text = dataGridView1.Rows[secilen].Cells[2].Value.ToString();
+            mskdTxtTel.Text = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
+            txtMail.Text = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
+        }
     }
 }

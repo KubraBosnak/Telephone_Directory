@@ -32,20 +32,20 @@ namespace Telephone_Directory
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnGuncelle = new System.Windows.Forms.Button();
+            this.btnTemizle = new System.Windows.Forms.Button();
+            this.btnSil = new System.Windows.Forms.Button();
+            this.btnEkle = new System.Windows.Forms.Button();
+            this.txtMail = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.mskdTxtTel = new System.Windows.Forms.MaskedTextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtSoyad = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtAd = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.mskdTxtTel = new System.Windows.Forms.MaskedTextBox();
-            this.txtMail = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnEkle = new System.Windows.Forms.Button();
-            this.btnSil = new System.Windows.Forms.Button();
-            this.btnTemizle = new System.Windows.Forms.Button();
-            this.btnGuncelle = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -71,6 +71,7 @@ namespace Telephone_Directory
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(415, 387);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // groupBox2
             // 
@@ -94,6 +95,79 @@ namespace Telephone_Directory
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "YENİ KİŞİ";
+            // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.Location = new System.Drawing.Point(103, 228);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(102, 23);
+            this.btnGuncelle.TabIndex = 13;
+            this.btnGuncelle.Text = "GÜNCELLE";
+            this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
+            // 
+            // btnTemizle
+            // 
+            this.btnTemizle.Location = new System.Drawing.Point(218, 228);
+            this.btnTemizle.Name = "btnTemizle";
+            this.btnTemizle.Size = new System.Drawing.Size(102, 23);
+            this.btnTemizle.TabIndex = 12;
+            this.btnTemizle.Text = "TEMİZLE";
+            this.btnTemizle.UseVisualStyleBackColor = true;
+            this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
+            // 
+            // btnSil
+            // 
+            this.btnSil.Location = new System.Drawing.Point(218, 189);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(102, 23);
+            this.btnSil.TabIndex = 11;
+            this.btnSil.Text = "SİL";
+            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
+            // 
+            // btnEkle
+            // 
+            this.btnEkle.Location = new System.Drawing.Point(103, 189);
+            this.btnEkle.Name = "btnEkle";
+            this.btnEkle.Size = new System.Drawing.Size(102, 23);
+            this.btnEkle.TabIndex = 10;
+            this.btnEkle.Text = "EKLE";
+            this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
+            // 
+            // txtMail
+            // 
+            this.txtMail.Location = new System.Drawing.Point(103, 146);
+            this.txtMail.Name = "txtMail";
+            this.txtMail.Size = new System.Drawing.Size(217, 22);
+            this.txtMail.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(35, 146);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 17);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "MAIL :";
+            // 
+            // mskdTxtTel
+            // 
+            this.mskdTxtTel.Location = new System.Drawing.Point(103, 118);
+            this.mskdTxtTel.Mask = "(999) 000-0000";
+            this.mskdTxtTel.Name = "mskdTxtTel";
+            this.mskdTxtTel.Size = new System.Drawing.Size(217, 22);
+            this.mskdTxtTel.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(40, 118);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 17);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "TEL :";
             // 
             // txtSoyad
             // 
@@ -143,76 +217,6 @@ namespace Telephone_Directory
             this.label1.Size = new System.Drawing.Size(29, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(40, 118);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 17);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "TEL :";
-            // 
-            // mskdTxtTel
-            // 
-            this.mskdTxtTel.Location = new System.Drawing.Point(103, 118);
-            this.mskdTxtTel.Mask = "(999) 000-0000";
-            this.mskdTxtTel.Name = "mskdTxtTel";
-            this.mskdTxtTel.Size = new System.Drawing.Size(217, 22);
-            this.mskdTxtTel.TabIndex = 3;
-            // 
-            // txtMail
-            // 
-            this.txtMail.Location = new System.Drawing.Point(103, 146);
-            this.txtMail.Name = "txtMail";
-            this.txtMail.Size = new System.Drawing.Size(217, 22);
-            this.txtMail.TabIndex = 4;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(35, 146);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 17);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "MAIL :";
-            // 
-            // btnEkle
-            // 
-            this.btnEkle.Location = new System.Drawing.Point(103, 189);
-            this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(102, 23);
-            this.btnEkle.TabIndex = 10;
-            this.btnEkle.Text = "EKLE";
-            this.btnEkle.UseVisualStyleBackColor = true;
-            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
-            // 
-            // btnSil
-            // 
-            this.btnSil.Location = new System.Drawing.Point(218, 189);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(102, 23);
-            this.btnSil.TabIndex = 11;
-            this.btnSil.Text = "SİL";
-            this.btnSil.UseVisualStyleBackColor = true;
-            // 
-            // btnTemizle
-            // 
-            this.btnTemizle.Location = new System.Drawing.Point(218, 228);
-            this.btnTemizle.Name = "btnTemizle";
-            this.btnTemizle.Size = new System.Drawing.Size(102, 23);
-            this.btnTemizle.TabIndex = 12;
-            this.btnTemizle.Text = "TEMİZLE";
-            this.btnTemizle.UseVisualStyleBackColor = true;
-            // 
-            // btnGuncelle
-            // 
-            this.btnGuncelle.Location = new System.Drawing.Point(103, 228);
-            this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(102, 23);
-            this.btnGuncelle.TabIndex = 13;
-            this.btnGuncelle.Text = "GÜNCELLE";
-            this.btnGuncelle.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
